@@ -1,0 +1,27 @@
+
+emp = load 'employee_details.txt' using PigStorage(',') as (eid:int,ename:chararray,salary,ranking:int);
+orderemp = order emp by ranking desc,ename asc;
+limit5 = limit orderemp 5;
+dump limit5;
+
+
+emp = load 'employee_details.txt' using PigStorage(',') as (eid:int,ename:chararray,salary,ranking:int);
+orderemp = order emp by ranking desc,ename asc;
+limit5 = limit orderemp 5;
+result = foreach limit5 generate eid,ename,ranking;
+dump limit5;
+
+fileemp = filter emp by salary%2 == 1;
+orderemp = order fileemp by salary,ename;
+limit3 = limit orderemp 3;
+dump limit3;
+
+
+
+emp = load 'employee_details.txt' using PigStorage(',') as (eid:int,ename:chararray,salary,ranking:int);
+exp = load 'employee_expenses.txt' using PigStorage('\t') as (eid:int,expense:int);
+empexp = join emp by eid,exp by eid;
+exxp = foreach empexp generate emp.eid,emp.ename,exp.expense;
+orderemp = order exxp by expense desc,ename asc;
+limit1 = limit orderemp 1;
+dump limit1;
