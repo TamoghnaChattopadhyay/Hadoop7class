@@ -1,0 +1,30 @@
+
+
+What are advantages of pig over MapReduce?
+
+Easy programming,fast processing,excution took less time than mapreduce,handles all kinds of data.
+
+ What is pig engine and what is its importance?
+
+Pig Engine that accepts the Pig Latin scripts as input and converts those scripts into MapReduce jobs.
+
+What are the modes of Pig execution?
+
+Interactive Mode (Grunt shell)
+Batch Mode (Script)
+Embedded Mode (UDF)
+
+
+What is grunt shell in Pig?
+
+In Pig interactive mode of execution is called Grunt shell. In this shell, one can enter the Pig Latin statements and get the output.
+
+What are the features of Pig Latin language?
+
+Rich set of operator,Easy programming,fast processing,Easy programming,fast processing,
+
+Is Pig latin commands case sensitive?
+ yes
+What is a data flow language?
+
+Whenever a programming language process the loaded  data and perform multiple operations like filter,group,sort and stored the final output,it called Data Flow language.
